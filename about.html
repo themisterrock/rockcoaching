@@ -2,39 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About – Rock Coaching</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Rock Coaching Logo" />
-      <h1>Rock Coaching</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.png" class="brand-mark" alt="Rock Coaching logo" />
+        <span class="brand-name">Rock Coaching</span>
+      </a>
+      <nav class="site-nav">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </nav>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
-  <section class="page-header">
-    <h2>About Rock Coaching</h2>
+  <section class="section section--tint">
+    <div class="container">
+      <h1>About Rock Coaching</h1>
+      <p class="lead">A calm, human space built around clarity, grounding, and steady personal change.</p>
+    </div>
   </section>
 
-  <section class="about-content">
-    <p>This page can hold your full coaching story, background, philosophy, qualifications, or anything that expresses why you do what you do. It’s meant to be warm, direct, and grounded. Replace this placeholder text when you're ready.</p>
-
-    <p>You might want to include your approach, what clients can expect when they work with you, and the values that guide your practice. You can also include a professional photo later.</p>
+  <section class="section">
+    <div class="container grid-2">
+      <div>
+        <img src="profile.jpg" alt="Coach portrait placeholder" style="border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,0.1);" />
+      </div>
+      <div>
+        <h2>Coaching Philosophy</h2>
+        <p>This space is where your personal story will sit — how you came to coaching, what you believe matters, and the values that guide your work. Keep it warm, grounded, and honest. You don’t need to oversell: people looking for support respond to clarity and calm.</p>
+        <p>You might talk about the way you work with clients, what you focus on during sessions, or how you help people move from stuck to steady. This is also a good place to share any background experience, training, or methods that shape your coaching approach.</p>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; Rock Coaching 2023</p>
+  <section class="section section--tint">
+    <div class="container">
+      <h2>Your Approach</h2>
+      <p>Below is a structure you can adapt into your own voice. These blocks make the page breathable and easy to read.</p>
+
+      <div class="grid-3" style="margin-top:40px;">
+        <article class="card card--border">
+          <h3>Clarity</h3>
+          <p>Helping clients slow the noise, identify what matters, and see the next steps clearly.</p>
+        </article>
+        <article class="card card--border">
+          <h3>Grounding</h3>
+          <p>Supporting people to reconnect with themselves so decisions feel steadier and more aligned.</p>
+        </article>
+        <article class="card card--border">
+          <h3>Direction</h3>
+          <p>Turning intention into action with small, sustainable steps — not overwhelming plans.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="foot-brand">
+        <img src="logo.png" alt="Rock Coaching logo" />
+        <p>© Rock Coaching</p>
+      </div>
+      <nav class="foot-nav">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="foot-social">
+        <a href="#">Instagram</a>
+        <a href="mailto:youremail@example.com">Email</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
-

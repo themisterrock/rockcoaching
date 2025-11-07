@@ -2,59 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rock Coaching</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta name="description" content="Wellbeing and life coaching grounded in clarity, calm, and practical change." />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Rock Coaching Logo" />
-      <h1>Rock Coaching</h1>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Rock Coaching home">
+        <img src="logo.png" alt="Rock Coaching logo" class="brand-mark" />
+        <span class="brand-name">Rock Coaching</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </nav>
     </div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Tagline Goes Here</h2>
-      <p>Mission statement or introductory message goes here. This will be replaced later.</p>
+  <!-- Hero -->
+  <section class="hero hero--with-bg">
+    <div class="container hero-inner">
+      <h1 class="hero-title">Tagline Goes Here</h1>
+      <p class="hero-sub">A short mission statement or welcome message will live here. Keep it human, calm, and direct.</p>
+      <div class="hero-cta">
+        <a class="btn btn--primary" href="services.html">Explore Coaching</a>
+        <a class="btn" href="contact.html">Get in Touch</a>
+      </div>
     </div>
   </section>
 
-  <section class="intro">
-    <h3>Welcome to Rock Coaching</h3>
-    <p>Supporting wellbeing, clarity, and positive change through grounded, practical coaching. This section can be edited later to match her tone and message.</p>
-  </section>
-
-  <section class="features">
-    <div class="feature">
-      <h4>Personal Coaching</h4>
-      <p>One-to-one guidance built around real change and self-understanding.</p>
-    </div>
-    <div class="feature">
-      <h4>Practical Wellbeing</h4>
-      <p>Tools and perspectives to support day-to-day balance and growth.</p>
-    </div>
-    <div class="feature">
-      <h4>Clear Direction</h4>
-      <p>Helping you move forward with confidence and purpose.</p>
+  <!-- Three pillars / features -->
+  <section class="section">
+    <div class="container grid-3">
+      <article class="card">
+        <h3>Personal Coaching</h3>
+        <p>One‑to‑one sessions centred on clarity, grounding, and habits that actually stick.</p>
+      </article>
+      <article class="card">
+        <h3>Practical Wellbeing</h3>
+        <p>Simple tools for balance: stress strategies, mindset work, and everyday rituals.</p>
+      </article>
+      <article class="card">
+        <h3>Clear Direction</h3>
+        <p>Plan the next steps with confidence. Align values, priorities, and action.</p>
+      </article>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; Rock Coaching 2023</p>
+  <!-- Services preview -->
+  <section class="section section--tint">
+    <div class="container">
+      <header class="section-head">
+        <h2>Coaching Services</h2>
+        <p>Support shaped around real life—not vague inspiration.</p>
+      </header>
+      <div class="grid-3">
+        <article class="card card--border">
+          <h3>1‑to‑1 Wellbeing</h3>
+          <p>Personal sessions tailored to your pace and goals. Practical, kind, steady.</p>
+          <a class="link" href="services.html">View details →</a>
+        </article>
+        <article class="card card--border">
+          <h3>Life Direction</h3>
+          <p>Reset priorities, reduce noise, make choices you can stand behind.</p>
+          <a class="link" href="services.html">View details →</a>
+        </article>
+        <article class="card card--border">
+          <h3>Mindset & Confidence</h3>
+          <p>Untangle inner dialogue, rebuild self‑trust, and move with more ease.</p>
+          <a class="link" href="services.html">View details →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials teaser -->
+  <section class="section">
+    <div class="container">
+      <header class="section-head">
+        <h2>What Clients Say</h2>
+      </header>
+      <div class="quotes">
+        <blockquote>“Steady, practical, and kind. I left each session with something useful.”</blockquote>
+        <blockquote>“I feel less scattered and more like myself again.”</blockquote>
+      </div>
+      <p><a class="link" href="testimonials.html">Read more testimonials →</a></p>
+    </div>
+  </section>
+
+  <!-- Blog preview -->
+  <section class="section section--tint">
+    <div class="container">
+      <header class="section-head">
+        <h2>From the Blog</h2>
+      </header>
+      <div class="grid-3 blog-cards">
+        <article class="card">
+          <h3>Sample Blog Post</h3>
+          <p class="meta">Date</p>
+          <p>A short excerpt previewing the post. Replace when real posts are added.</p>
+          <a class="link" href="blog.html">Visit blog →</a>
+        </article>
+        <article class="card">
+          <h3>Another Entry</h3>
+          <p class="meta">Date</p>
+          <p>Keep posts short and human. Helpful, not preachy.</p>
+          <a class="link" href="blog.html">Visit blog →</a>
+        </article>
+        <article class="card">
+          <h3>On Small Changes</h3>
+          <p class="meta">Date</p>
+          <p>Micro‑habits beat massive overhauls. Start where you are.</p>
+          <a class="link" href="blog.html">Visit blog →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="foot-brand">
+        <img src="logo.png" alt="Rock Coaching logo" />
+        <p>© Rock Coaching</p>
+      </div>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="foot-social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="mailto:youremail@example.com" aria-label="Email">Email</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
-
-
-
-

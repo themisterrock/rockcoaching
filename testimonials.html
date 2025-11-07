@@ -2,47 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Testimonials – Rock Coaching</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Rock Coaching Logo" />
-      <h1>Rock Coaching</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.png" class="brand-mark" alt="Rock Coaching logo" />
+        <span class="brand-name">Rock Coaching</span>
+      </a>
+      <nav class="site-nav">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </nav>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html" class="active">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
-  <section class="page-header">
-    <h2>Client Testimonials</h2>
+  <section class="section section--tint">
+    <div class="container">
+      <h1>Client Testimonials</h1>
+      <p class="lead">Real reflections from people who've worked through change, steadiness, and clarity with Rock Coaching.</p>
+    </div>
   </section>
 
-  <section class="testimonials">
-    <div class="testimonial">
-      <p class="quote">“This is a placeholder testimonial. Real feedback can be added here later.”</p>
-      <p class="author">– Name Here</p>
-    </div>
+  <section class="section">
+    <div class="container grid-2" style="gap:40px;">
 
-    <div class="testimonial">
-      <p class="quote">“Another placeholder testimonial to show layout and spacing.”</p>
-      <p class="author">– Name Here</p>
-    </div>
+      <article class="card" style="border-left:4px solid #c9a86f;">
+        <blockquote style="margin:0;">
+          <p>“Steady, practical, and kind. Every session left me with something I could actually use the same day. I didn’t feel overwhelmed once.”</p>
+          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client Name</footer>
+        </blockquote>
+      </article>
 
-    <p class="note">Add or remove testimonials as needed. Each block can be copied and edited easily.</p>
+      <article class="card" style="border-left:4px solid #c9a86f;">
+        <blockquote style="margin:0;">
+          <p>“I feel less scattered and more like myself again. The sessions helped me untangle so much noise I didn’t realise I was carrying.”</p>
+          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client Name</footer>
+        </blockquote>
+      </article>
+
+      <article class="card" style="border-left:4px solid #c9a86f;">
+        <blockquote style="margin:0;">
+          <p>“What I loved is that nothing felt forced. The guidance was calm, thoughtful, and actually made sense for my life.”</p>
+          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client Name</footer>
+        </blockquote>
+      </article>
+
+      <article class="card" style="border-left:4px solid #c9a86f;">
+        <blockquote style="margin:0;">
+          <p>“I surprised myself with how much clarity I found. I came in feeling stuck and left feeling like I finally had traction again.”</p>
+          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client Name</footer>
+        </blockquote>
+      </article>
+
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; Rock Coaching 2023</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="foot-brand">
+        <img src="logo.png" alt="Rock Coaching logo" />
+        <p>© Rock Coaching</p>
+      </div>
+      <nav class="foot-nav">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="foot-social">
+        <a href="#">Instagram</a>
+        <a href="mailto:youremail@example.com">Email</a>
+      </div>
+    </div>
   </footer>
 </body>
-
 </html>

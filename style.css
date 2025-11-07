@@ -1,116 +1,220 @@
-/* Colour palette pulled from the logo:
-   Deep charcoal-blue: #1a1d25
-   Muted gold: #c8a96b
-   Soft neutral background: #f5f5f2
-   Light grey accents: #e1e1dd
-*/
+/* =============================
+   Rock Coaching – Modern Stylesheet (v2)
+   ============================= */
+
+/* ---------- Fonts & Base ---------- */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after { box-sizing: inherit; }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f2;
-  color: #1a1d25;
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  background: #faf9f6;
+  color: #1e1e1e;
+  line-height: 1.65;
 }
 
-header {
-  background: #1a1d25;
-  color: #ffffff;
-  padding: 20px;
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0 0 0.5em;
+}
+
+p { margin: 0 0 1em; }
+
+/* ---------- Layout Utilities ---------- */
+.container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section--tint {
+  background: #f1eee9;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: #111;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header .logo {
+.brand {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: white;
   gap: 15px;
 }
 
-header .logo img {
-  height: 50px;
+.brand-mark {
+  height: 48px;
+  width: auto;
 }
 
-nav a {
-  color: #ffffff;
+.brand-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.site-nav a {
+  color: white;
+  margin-left: 25px;
   text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
+  font-weight: 500;
+  position: relative;
 }
 
-nav a.active {
-  color: #c8a96b;
+.site-nav a:hover {
+  color: #c9a86f;
 }
 
-.hero {
-  background: #e1e1dd;
-  padding: 80px 20px;
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid #c9a86f;
+  color: #c9a86f;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #c9a86f;
+  color: black;
+}
+
+.btn--primary {
+  background: #c9a86f;
+  color: #111;
+}
+
+.btn--primary:hover {
+  background: #ae914f;
+}
+
+/* ---------- Hero ---------- */
+.hero--with-bg {
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  padding: 140px 0;
   text-align: center;
+  color: white;
+  position: relative;
 }
 
-.hero h2 {
-  color: #1a1d25;
+.hero--with-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 0.3em;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 1.5em;
+}
+
+.hero-cta a { margin: 0 8px; }
+
+/* ---------- Cards ---------- */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.card--border {
+  border-top: 4px solid #c9a86f;
+}
+
+/* ---------- Quotes ---------- */
+.quotes blockquote {
+  font-style: italic;
+  padding-left: 20px;
+  border-left: 3px solid #c9a86f;
+  margin-bottom: 1.5em;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #111;
+  color: white;
+  padding: 50px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.foot-brand img {
+  height: 50px;
   margin-bottom: 10px;
 }
 
- .intro, .features, .about-content, .services-list, .testimonials, .blog-intro, .blog-posts, .contact-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+.foot-nav a, .foot-social a {
+  color: #c9a86f;
+  margin-right: 20px;
+  text-decoration: none;
 }
 
-.features {
-  display: flex;
-  gap: 20px;
+.foot-nav a:hover, .foot-social a:hover {
+  color: white;
 }
 
-.feature {
-  flex: 1;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 6px;
-  border-left: 4px solid #c8a96b;
-}
-
-.page-header {
-  background: #c8a96b;
-  padding: 40px 20px;
-  text-align: center;
-  color: #1a1d25;
-}
-
-.service, .testimonial, .post {
-  background: #ffffff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 6px;
-  border-left: 4px solid #c8a96b;
-}
-
-.quote {
-  font-style: italic;
-}
-
-.date {
-  color: #6a6a6a;
+/* ---------- Blog Cards ---------- */
+.blog-cards .card .meta {
   font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 0.8em;
 }
 
-.contact-details p {
-  margin: 8px 0;
-}
-
-.note {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 15px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  background: #1a1d25;
-  color: #ffffff;
+/* ---------- Responsiveness ---------- */
+@media (max-width: 760px) {
+  .hero-title { font-size: 2.2rem; }
+  .site-nav { display: none; } /* You may add a mobile menu later */
 }
