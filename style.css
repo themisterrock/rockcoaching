@@ -1,0 +1,116 @@
+/* Colour palette pulled from the logo:
+   Deep charcoal-blue: #1a1d25
+   Muted gold: #c8a96b
+   Soft neutral background: #f5f5f2
+   Light grey accents: #e1e1dd
+*/
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f2;
+  color: #1a1d25;
+  line-height: 1.6;
+}
+
+header {
+  background: #1a1d25;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #c8a96b;
+}
+
+.hero {
+  background: #e1e1dd;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  color: #1a1d25;
+  margin-bottom: 10px;
+}
+
+ .intro, .features, .about-content, .services-list, .testimonials, .blog-intro, .blog-posts, .contact-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.features {
+  display: flex;
+  gap: 20px;
+}
+
+.feature {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  border-left: 4px solid #c8a96b;
+}
+
+.page-header {
+  background: #c8a96b;
+  padding: 40px 20px;
+  text-align: center;
+  color: #1a1d25;
+}
+
+.service, .testimonial, .post {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border-left: 4px solid #c8a96b;
+}
+
+.quote {
+  font-style: italic;
+}
+
+.date {
+  color: #6a6a6a;
+  font-size: 0.9rem;
+}
+
+.contact-details p {
+  margin: 8px 0;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: #1a1d25;
+  color: #ffffff;
+}
