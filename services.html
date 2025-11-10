@@ -9,34 +9,39 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Rock Coaching home">
         <img src="logo.png" class="brand-mark" alt="Rock Coaching logo" />
         <span class="brand-name">Rock Coaching</span>
       </a>
-      <nav class="site-nav">
+      <button class="mobile-toggle" aria-label="Toggle menu"><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation">
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="testimonials.html">Testimonials</a>
         <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <a class="btn" href="contact.html">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
       </nav>
     </div>
   </header>
 
-  <section class="section section--tint">
-    <div class="container">
+  <!-- Celestial hero -->
+  <section class="hero hero--with-bg">
+    <div class="container hero-inner reveal">
       <h1>Coaching Services</h1>
-      <p class="lead">Steady, practical support tailored to real life. No jargon. No overwhelm. Just grounded guidance.</p>
+      <p class="hero-sub">Steady, practical support tailored to real life. No jargon. No overwhelm. Just grounded guidance.</p>
     </div>
   </section>
 
+  <!-- Services grid -->
   <section class="section">
     <div class="container grid-2" style="gap:50px;">
-      <article class="card card--border">
-        <h2>1-to-1 Wellbeing Coaching</h2>
-        <p>These sessions are built around clarity, grounding, and building habits that hold up in everyday life. Each session explores what's working, what's not, and what can shift now — without pressure.</p>
+      <article class="card card--border reveal">
+        <h2>1‑to‑1 Wellbeing Coaching</h2>
+        <p>Sessions built around clarity, grounding, and habits that hold up in everyday life. Explore what’s working, what’s not, and what can shift now — without pressure.</p>
         <ul style="margin-left:20px;">
           <li>Reduce overwhelm and mental noise</li>
           <li>Build meaningful daily structure</li>
@@ -45,11 +50,11 @@
         </ul>
       </article>
 
-      <article class="card card--border">
+      <article class="card card--border reveal">
         <h2>Life Direction Sessions</h2>
-        <p>For moments when everything feels "up in the air." These sessions help you press pause, reassess priorities, and map out a direction that feels honest and workable.</p>
+        <p>For moments when everything feels up in the air. Pause, reassess priorities, and map out a direction that feels honest and workable.</p>
         <ul style="margin-left:20px;">
-          <li>Re-align goals and values</li>
+          <li>Re‑align goals and values</li>
           <li>Make clearer decisions</li>
           <li>Break down big changes into steps</li>
           <li>Move from stuck to steady</li>
@@ -60,32 +65,34 @@
 
   <section class="section section--tint">
     <div class="container grid-2" style="gap:50px;">
-      <article class="card card--border">
+      <article class="card card--border reveal">
         <h2>Mindset & Confidence Support</h2>
-        <p>These sessions focus on shifting inner dialogue, rebuilding confidence, and getting you out of the cycle of second-guessing. Practical, compassionate, and structured.</p>
+        <p>Shift the inner dialogue, rebuild confidence, and get out of the loop of second‑guessing. Practical, compassionate, and structured.</p>
         <ul style="margin-left:20px;">
-          <li>Improve self-trust</li>
+          <li>Improve self‑trust</li>
           <li>Quiet the inner critic</li>
           <li>Develop resilient thinking</li>
           <li>Build confidence through action</li>
         </ul>
       </article>
 
-      <article class="card" style="border-left:4px solid #c9a86f;">
+      <!-- Static anchor card (no reveal class by request) -->
+      <article class="card" style="border-left:4px solid var(--brand);">
         <h2>How Sessions Work</h2>
-        <p>This is a flexible space — you can customise it to describe session length, pricing, frequency, location (online/in-person), or any practical details clients should know.</p>
-        <p>If you're still shaping those details, keep this section as a placeholder until you're ready to add the specifics.</p>
+        <p>Customise this with session length, pricing, frequency, and location (online or in‑person). Keep it simple and clear so clients know what to expect.</p>
+        <p>If you’re still shaping the details, leave this as a placeholder until ready.</p>
       </article>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="foot-brand">
         <img src="logo.png" alt="Rock Coaching logo" />
         <p>© Rock Coaching</p>
       </div>
-      <nav class="foot-nav">
+      <nav class="foot-nav" aria-label="Footer">
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="testimonials.html">Testimonials</a>
@@ -93,11 +100,13 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="foot-social">
-        <a href="#">Instagram</a>
-        <a href="mailto:youremail@example.com">Email</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="mailto:rockcoaching@gmail.com" aria-label="Email">Email</a>
       </div>
     </div>
   </footer>
-</body>
 
+  <!-- Shared script -->
+  <script src="script.js"></script>
+</body>
 </html>

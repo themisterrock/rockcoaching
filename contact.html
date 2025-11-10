@@ -15,12 +15,14 @@
         <img src="logo.png" class="brand-mark" alt="Rock Coaching logo" />
         <span class="brand-name">Rock Coaching</span>
       </a>
+      <button class="mobile-toggle" aria-label="Toggle menu"><span></span></button>
       <nav class="site-nav">
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="testimonials.html">Testimonials</a>
         <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <a class="btn" href="contact.html">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
       </nav>
     </div>
   </header>
@@ -28,33 +30,26 @@
   <section class="section section--tint">
     <div class="container">
       <h1>Get in Touch</h1>
-      <p class="lead">A calm, private space to reach out. Whether you're enquiring about coaching or just curious, you’ll get a thoughtful reply.</p>
+      <p class="lead">Whether you’re exploring coaching or have a question, your message is welcome. This form sends directly to <strong>rockcoaching@gmail.com</strong>.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container" style="max-width:800px;">
+    <div class="container" style="max-width:700px;">
+      <form action="https://formspree.io/f/yourformid" method="POST" class="card reveal">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;" />
 
-      <div class="card" style="margin-bottom:40px;">
-        <h2>Contact Details</h2>
-        <p>The details below are placeholders — replace them with your preferred methods of communication.</p>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;" />
 
-        <p><strong>Email:</strong> youremail@example.com</p>
-        <p><strong>Instagram:</strong> @yourhandle</p>
-        <p><strong>Phone (optional):</strong> Add if desired</p>
-      </div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;"></textarea>
 
-      <div class="card" style="border-left:4px solid #c9a86f;">
-        <h2>How to Use This Page</h2>
-        <p>If you prefer not to list personal contact details openly, you can:</p>
-        <ul style="margin-left:20px;">
-          <li>Use a dedicated coaching email address</li>
-          <li>Link directly to a business Instagram account</li>
-          <li>Add an embedded contact form (services like Formspree work with static sites)</li>
-        </ul>
-        <p>This section can be adapted later depending on how she wants clients to reach out.</p>
-      </div>
+        <button type="submit" class="btn btn--primary">Send Message</button>
+      </form>
 
+      <p class="note">To activate the form, sign up at <a href="https://formspree.io" target="_blank">Formspree.io</a> using <strong>rockcoaching@gmail.com</strong>, create a new project, and replace <code>yourformid</code> in the form action above with the unique Form ID they provide.</p>
     </div>
   </section>
 
@@ -73,10 +68,29 @@
       </nav>
       <div class="foot-social">
         <a href="#">Instagram</a>
-        <a href="mailto:youremail@example.com">Email</a>
+        <a href="mailto:rockcoaching@gmail.com">Email</a>
       </div>
     </div>
   </footer>
-</body>
 
+  <script>
+  // Mobile nav toggle
+  const header = document.querySelector('.site-header');
+  document.querySelector('.mobile-toggle').addEventListener('click', ()=>{
+    header.classList.toggle('nav-open');
+  });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal--visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
 </html>
