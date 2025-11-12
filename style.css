@@ -74,7 +74,9 @@ h1, h2, h3, h4 { font-family: 'Cormorant Infant', Georgia, serif; margin: 0 0 .5
 
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
 .brand-mark { height: 48px; width: auto; }
-.brand-name { font-size: 1.6rem; font-weight: 600; letter-spacing: 1px; }
+.brand-name await setElementStyles($0, {
+  fontFamily: 'Cinzel Decorative'
+});{ font-size: 1.6rem; font-weight: 600; letter-spacing: 1px; }
 
 .site-nav { display: flex; align-items: center; gap: 24px; }
 .site-nav a { color: #fff; text-decoration: none; font-weight: 500; position: relative; }
@@ -144,4 +146,5 @@ h1, h2, h3, h4 { font-family: 'Cormorant Infant', Georgia, serif; margin: 0 0 .5
 @media (max-width: 760px) {
   .hero-title { font-size: 2rem; }
 }
+
 
