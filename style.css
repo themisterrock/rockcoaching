@@ -1,0 +1,212 @@
+/* ================================================================
+   Rock Coaching – Final Stable Stylesheet
+   Clean rebuild with image-based starfield
+   --------------------------------------------------------------- */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Infant:wght@400;600&family=Inter:wght@300;400;600&display=swap');
+
+/* Root Colour Theme ------------------------------------------------------ */
+:root {
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --tint: #f1eee9;
+  --header: #111111;
+  --text: #1c1c1c;
+  --muted: #5a5a5a;
+
+  --brand: #c9a86f;
+  --brand-700: #ae914f;
+
+  --shadow-1: 0 1px 4px rgba(0,0,0,0.08);
+  --shadow-2: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #10131d;
+    --surface: #131621;
+    --tint: #181c28;
+    --header: #0d0f18;
+    --text: #e9ecf3;
+    --muted: #b4bac3;
+    --brand: #d3b77f;
+    --brand-700: #b89955;
+  }
+}
+
+/* Base ------------------------------------------------------------------- */
+html { box-sizing: border-box; scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.65;
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Infant', serif;
+  color: var(--text);
+  margin: 0 0 .5em;
+}
+
+.container { width: min(1200px, 90%); margin: 0 auto; }
+.section { padding: 80px 0; }
+.section--tint { background: var(--tint); }
+
+/* Header ----------------------------------------------------------------- */
+.site-header {
+  background: var(--header);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  height: 48px;
+}
+
+.brand-name {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+/* Navigation ------------------------------------------------------------- */
+.site-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  color: var(--brand);
+}
+
+/* Mobile Nav ------------------------------------------------------------- */
+.mobile-toggle {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--brand);
+  border-radius: 6px;
+  color: var(--brand);
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mobile-toggle span {
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+}
+
+.mobile-toggle span::before,
+.mobile-toggle span::after {
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  height:2px;
+  background: currentColor;
+}
+
+.mobile-toggle span::before { top:-6px; }
+.mobile-toggle span::after  { top: 6px; }
+
+@media (max-width: 900px) {
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--header);
+    padding: 16px 5%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+  }
+  .site-header.nav-open .site-nav { display: flex; }
+  .mobile-toggle { display: flex; }
+}
+
+/* Buttons ---------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid var(--brand);
+  color: var(--brand);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: .2s;
+}
+.btn:hover { background: var(--brand); color: #111; }
+
+.btn--primary {
+  background: var(--brand);
+  color: #111;
+}
+.btn--primary:hover { background: var(--brand-700); }
+
+/* Hero ------------------------------------------------------------------- */
+.hero--with-bg {
+  position: relative;
+  padding: 140px 0;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  background:
+    url('starfield.png') repeat,
+    radial-gradient(1200px 500px at 50% -10%, rgba(201,168,111,0.22), transparent 60%),
+    radial-gradient(900px 400px at 80% 10%, rgba(201,168,111,0.16), transparent 60%),
+    linear-gradient(180deg, #2a3142 0%, #1a2133 60%, #151b2b 100%);
+  background-size: 800px 800px, auto, auto, auto;
+  animation: starShift 55s linear infinite;
+}
+
+@keyframes starShift {
+  from { background-position: 0 0, 0 0, 0 0, 0 0; }
+  to   { background-position: -180px -180px, 0 0, 0 0, 0 0; }
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  margin-bottom: 0.3em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.55);
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  opacity: .95;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.55);
+}
+
+/* Cards, testimonials, footer etc. will continue using the stable layout
+   from your earlier version — if you want them migrated too, say the word. */
