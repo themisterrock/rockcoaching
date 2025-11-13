@@ -1,142 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About – Rock Coaching</title>
- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Rock Coaching</title>
+  <link rel="stylesheet" href="style-final.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="logo.png" class="brand-mark" alt="Rock Coaching logo" />
-        <span class="brand-name">Rock Coaching</span>
-      </a>
-      <button class="mobile-toggle" aria-label="Toggle menu"><span></span></button>
-      <nav class="site-nav">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Celestial hero to match Home -->
-  <section class="hero hero--with-bg">
-    <div class="container hero-inner reveal">
-      <h1>About Rock Coaching</h1>
-      <p class="hero-sub">A calm, human space built around clarity, grounding, and steady personal change.</p>
-    </div>
-  </section>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="logo.png" alt="">
+      <span class="brand-name">Rock Coaching</span>
+    </a>
 
-  <section class="section">
-    <div class="container grid-2 reveal">
-      <div>
-        <img src="logo.png" alt="Coach portrait placeholder" class="reveal" style="border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,0.1);" />
+    <button class="mobile-toggle" onclick="document.querySelector('.site-header').classList.toggle('nav-open')">
+      <span></span>
+    </button>
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section reveal">
+  <div class="container">
+    <h2>About Rock Coaching</h2>
+    <p class="lead">A calm, grounded space where clarity grows and confidence follows.</p>
+
+    <div class="grid-gap-large">
+      <div class="feature-block">
+        <h3>My Approach</h3>
+        <p>I focus on practicality, honesty, and human warmth. Coaching is a conversation — not a lecture.</p>
       </div>
-      <div>
-        <h2>Coaching Philosophy</h2>
-        <p>This space is where your personal story will sit — how you came to coaching, what you believe matters, and the values that guide your work. Keep it warm, grounded, and honest. You don’t need to oversell: people looking for support respond to clarity and calm.</p>
-        <p>You might talk about the way you work with clients, what you focus on during sessions, or how you help people move from stuck to steady. This is also a good place to share any background experience, training, or methods that shape your coaching approach.</p>
+
+      <div class="feature-block">
+        <h3>Your Experience</h3>
+        <p>Sessions are built around your pace, your goals, and your life — not an off-the-shelf formula.</p>
       </div>
-    </div>
-  </section>
 
-  <section class="section section--tint">
-    <div class="container reveal">
-      <h2>Your Approach</h2>
-      <p>Below is a structure you can adapt into your own voice. These blocks make the page breathable and easy to read.</p>
-
-      <div class="grid-3" style="margin-top:40px;">
-        <article class="card card--border">
-          <h3>Clarity</h3>
-          <p>Helping clients slow the noise, identify what matters, and see the next steps clearly.</p>
-        </article>
-        <article class="card card--border">
-          <h3>Grounding</h3>
-          <p>Supporting people to reconnect with themselves so decisions feel steadier and more aligned.</p>
-        </article>
-        <article class="card card--border">
-          <h3>Direction</h3>
-          <p>Turning intention into action with small, sustainable steps — not overwhelming plans.</p>
-        </article>
+      <div class="feature-block">
+        <h3>Why It Works</h3>
+        <p>When we slow the noise, your real voice becomes clear. And that’s where change begins.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="foot-brand">
-        <img src="logo.png" alt="Rock Coaching logo" />
-        <p>© Rock Coaching 2023</p>
-      </div>
-      <nav class="foot-nav">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="foot-social">
-        <a href="#">Instagram</a>
-        <a href="mailto:rockcoaching@gmail.com">Email</a>
-      </div>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="container">
+    <a class="footer-brand" href="index.html">Rock Coaching</a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© 2025 Rock Coaching.</p>
+  </div>
+</footer>
 
-  <script>
-  // Mobile nav toggle
-  const header = document.querySelector('.site-header');
-  document.querySelector('.mobile-toggle').addEventListener('click', ()=>{
-    header.classList.toggle('nav-open');
-  });
-
-  // Optional manual theme override (auto still follows system)
-  const root = document.documentElement;
-  const btnTheme = document.querySelector('.theme-toggle');
-  btnTheme.addEventListener('click', ()=>{
-    const current = root.getAttribute('data-theme');
-    root.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
-  });
-
-  // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal--visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-  </script>
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const reveal = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("revealed");
-    });
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("revealed"));
   });
-
   document.querySelectorAll(".reveal").forEach(el => reveal.observe(el));
 });
 </script>
 
 </body>
-
 </html>
-
-
-
-
-
-
-
-
