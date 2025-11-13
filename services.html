@@ -1,128 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services – Rock Coaching</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services — Rock Coaching</title>
+  <link rel="stylesheet" href="style-final.css">
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Rock Coaching home">
-        <img src="logo.png" class="brand-mark" alt="Rock Coaching logo" />
-        <span class="brand-name">Rock Coaching</span>
-      </a>
-      <button class="mobile-toggle" aria-label="Toggle menu"><span></span></button>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Celestial hero -->
-  <section class="hero hero--with-bg">
-    <div class="container hero-inner reveal">
-      <h1>Coaching Services</h1>
-      <p class="hero-sub">Steady, practical support tailored to real life. No jargon. No overwhelm. Just grounded guidance.</p>
-    </div>
-  </section>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="logo.png" alt="">
+      <span class="brand-name">Rock Coaching</span>
+    </a>
+    <button class="mobile-toggle" onclick="document.querySelector('.site-header').classList.toggle('nav-open')">
+      <span></span>
+    </button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Services grid -->
-  <section class="section">
-    <div class="container grid-2" style="gap:50px;">
-      <article class="card card--border reveal">
-        <h2>1‑to‑1 Wellbeing Coaching</h2>
-        <p>Sessions built around clarity, grounding, and habits that hold up in everyday life. Explore what’s working, what’s not, and what can shift now — without pressure.</p>
-        <ul style="margin-left:20px;">
-          <li>Reduce overwhelm and mental noise</li>
-          <li>Build meaningful daily structure</li>
-          <li>Strengthen emotional steadiness</li>
-          <li>Create simple, sustainable changes</li>
-        </ul>
-      </article>
+<section class="section reveal">
+  <div class="container">
+    <h2>Coaching Services</h2>
+    <p class="lead">Support built around growth that lasts — at a pace that respects your life.</p>
 
-      <article class="card card--border reveal">
-        <h2>Life Direction Sessions</h2>
-        <p>For moments when everything feels up in the air. Pause, reassess priorities, and map out a direction that feels honest and workable.</p>
-        <ul style="margin-left:20px;">
-          <li>Re‑align goals and values</li>
-          <li>Make clearer decisions</li>
-          <li>Break down big changes into steps</li>
-          <li>Move from stuck to steady</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section class="section section--tint">
-    <div class="container grid-2" style="gap:50px;">
-      <article class="card card--border reveal">
-        <h2>Mindset & Confidence Support</h2>
-        <p>Shift the inner dialogue, rebuild confidence, and get out of the loop of second‑guessing. Practical, compassionate, and structured.</p>
-        <ul style="margin-left:20px;">
-          <li>Improve self‑trust</li>
-          <li>Quiet the inner critic</li>
-          <li>Develop resilient thinking</li>
-          <li>Build confidence through action</li>
-        </ul>
-      </article>
-
-      <!-- Static anchor card (no reveal class by request) -->
-      <article class="card" style="border-left:4px solid var(--brand);">
-        <h2>How Sessions Work</h2>
-        <p>Customise this with session length, pricing, frequency, and location (online or in‑person). Keep it simple and clear so clients know what to expect.</p>
-        <p>If you’re still shaping the details, leave this as a placeholder until ready.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="foot-brand">
-        <img src="logo.png" alt="Rock Coaching logo" />
-        <p>© Rock Coaching 2023</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Personal Coaching</h3>
+        <p>One-to-one sessions focused on building clarity, confidence, and direction.</p>
       </div>
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="foot-social">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="mailto:rockcoaching@gmail.com" aria-label="Email">Email</a>
+
+      <div class="card">
+        <h3>Wellbeing Coaching</h3>
+        <p>Develop calm, resilience, and emotional steadiness — even in challenging times.</p>
+      </div>
+
+      <div class="card">
+        <h3>Transitions Coaching</h3>
+        <p>Navigate life changes with intention, honesty, and real support.</p>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Shared script -->
-  <script src="script.js"></script>
-  <script>
+<footer class="site-footer">
+  <div class="container">
+    <a class="footer-brand" href="index.html">Rock Coaching</a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© 2025 Rock Coaching.</p>
+  </div>
+</footer>
+
+<script>
 document.addEventListener("DOMContentLoaded", () => {
-  const reveal = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("revealed");
-    });
-  });
-
-  document.querySelectorAll(".reveal").forEach(el => reveal.observe(el));
+  const r = new IntersectionObserver(E => E.forEach(e => e.isIntersecting && e.target.classList.add("revealed")));
+  document.querySelectorAll(".reveal").forEach(el => r.observe(el));
 });
 </script>
 
 </body>
 </html>
-
-
-
-
