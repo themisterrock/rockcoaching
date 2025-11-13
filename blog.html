@@ -1,123 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog – Rock Coaching</title>
- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — Rock Coaching</title>
+  <link rel="stylesheet" href="style-final.css">
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="logo.png" class="brand-mark" alt="Rock Coaching logo" />
-        <span class="brand-name">Rock Coaching</span>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="logo.png" alt="">
+      <span class="brand-name">Rock Coaching</span>
+    </a>
+    <button class="mobile-toggle" onclick="document.querySelector('.site-header').classList.toggle('nav-open')">
+      <span></span>
+    </button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section reveal">
+  <div class="container">
+    <h2>Coaching Insights</h2>
+    <p class="lead">Thoughts, reflections, and helpful perspectives.</p>
+
+    <div class="blog-list">
+
+      <a href="blog-post.html" class="blog-card">
+        <h3>Sample Blog Post</h3>
+        <div class="meta">Posted January 2025</div>
+        <p>A short preview appears here. This will encourage readers to click and read more.</p>
       </a>
-      <button class="mobile-toggle" aria-label="Toggle menu"><span></span></button>
-      <nav class="site-nav">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
-      </nav>
+
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- Celestial hero -->
-  <section class="hero hero--with-bg">
-    <div class="container hero-inner reveal">
-      <h1>November Blog</h1>
-      <p class="hero-sub">Short reflections, practical tools, and gentle reminders — simple insights you can revisit anytime.</p>
-    </div>
-  </section>
+<footer class="site-footer">
+  <div class="container">
+    <a class="footer-brand" href="index.html">Rock Coaching</a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© 2025 Rock Coaching.</p>
+  </div>
+</footer>
 
-  <!-- Blog content -->
-  <section class="section">
-    <div class="container" style="max-width:850px;">
-
-      <!-- SAMPLE POST BLOCK (Duplicate to add new posts) -->
-      <article class="card reveal" style="margin-bottom:40px;">
-        <h2>The Strength In Slowing Down</h2>
-        <p class="meta">12 November 2025</p>
-        <p>Most of us spend our days chasing momentum — ticking boxes, juggling lists, staying busy enough to feel like we’re getting somewhere. But real strength isn’t always in motion. Sometimes it’s found in stillness, in the space between one thing and the next.
-            When we slow down, we start to notice what’s actually driving us: the thoughts that keep looping, the pressure we put on ourselves, the small wins we forget to recognise. Slowing down doesn’t mean doing less; it means doing things with more awareness.
-            If you find yourself running on autopilot, try pausing — properly. Step outside, feel the air, breathe in deliberately. That small moment of grounding resets more than your body; it clears the fog from your thoughts.
-            In coaching sessions, this pause becomes powerful. It’s where people rediscover the ability to choose — what to prioritise, what to release, and what truly matters.There’s strength in slowing down. 
-            It’s not giving up pace; it’s finding your own rhythm again.</p>
-      </article>
-      <!-- END SAMPLE BLOCK -->
-
-      <article class="card reveal" style="margin-bottom:40px;">
-        <h2>Tiny Habits, Real Change</h2>
-        <p class="meta">19 November 2025</p>
-        <p>When we think about changing our lives, most of us imagine big leaps — new routines, new careers, complete transformations. But real change usually starts smaller than that.
-            The smallest habits are often the most powerful because they’re sustainable. One glass of water before coffee. A five-minute walk between meetings. Writing a single sentence in a journal rather than a full page. These moments seem tiny, but they begin to shift your relationship with discipline, self-trust, and energy.
-            In coaching, I often see people wait for the “right moment” to start something new. The truth is, the right moment appears once you’ve already started.
-            Choose one small thing today — something kind to yourself, something achievable. Do it again tomorrow. And again the day after. Momentum doesn’t come from motivation; it comes from repetition.
-            Small steps don’t look impressive, but they quietly build a stronger foundation — the kind that lasts.</p>
-      </article>
-      
-      <article class="card reveal" style="margin-bottom:40px;">
-        <h2>Learning to Listen Inward</h2>
-        <p class="meta">25 November 2025</p>
-        <p>Most of us are taught to listen outwards — to the noise, the deadlines, the opinions, the expectations. It’s easy to become fluent in what everyone else needs and forget what our own voice sounds like.
-            Listening inward takes practice. It’s not about ignoring the world; it’s about creating a quiet space inside it. Sometimes that space appears in stillness, other times in movement — a walk, a long shower, a few slow breaths before the next task.
-            When we pause long enough to listen, we start to hear what’s underneath the busyness: the small nudges, the unmet needs, the quiet yes or no we’ve been overlooking.
-            Coaching isn’t about fixing people. It’s about helping them tune back into that inner voice — the one that already knows what needs to happen next, if we’d only make room to hear it.
-            Listening inward isn’t selfish. It’s how you come home to yourself.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="foot-brand">
-        <img src="logo.png" alt="Rock Coaching logo" />
-        <p>© Rock Coaching 2023</p>
-      </div>
-      <nav class="foot-nav">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="foot-social">
-        <a href="#">Instagram</a>
-        <a href="mailto:rockcoaching@gmail.com">Email</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Shared script -->
-  <script src="script.js"></script>
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
-  const reveal = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("revealed");
-    });
-  });
-
-  document.querySelectorAll(".reveal").forEach(el => reveal.observe(el));
+  const r = new IntersectionObserver(E => E.forEach(e => e.isIntersecting && e.target.classList.add("revealed")));
+  document.querySelectorAll(".reveal").forEach(el => r.observe(el));
 });
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
