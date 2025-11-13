@@ -147,6 +147,22 @@ h1, h2, h3, h4 {
   overflow: hidden;
   z-index: 0;
 }
+/* TEMP: Force starfield pseudo-elements to render */
+.hero--with-bg .stars::before,
+.hero--with-bg .stars::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,255,0,0.4) !important; /* green debug */
+  z-index: 0;
+}
+
+.hero--with-bg .stars::after {
+  background: rgba(0,0,255,0.4) !important; /* blue debug */
+  animation: none !important;
+}
 
 .hero--with-bg .stars::before,
 .hero--with-bg .stars::after {
