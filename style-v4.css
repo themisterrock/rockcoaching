@@ -33,6 +33,7 @@
   top: 0; left: 0;
   width: 200%;
   height: 200%;
+  z-index: 0; /* ⭐ Needed so they're above the hero background */
   background:
     radial-gradient(2px 2px at 20% 30%, rgba(202,180,120,0.95), transparent 60%),
     radial-gradient(2px 2px at 80% 70%, rgba(202,180,120,0.85), transparent 60%),
@@ -42,6 +43,8 @@
   background-repeat: repeat;
   animation: drift 30s linear infinite;
   opacity: 0.55;
+}
+
 }
 
 /* Second layer */
