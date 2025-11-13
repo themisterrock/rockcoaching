@@ -167,9 +167,31 @@ h1, h2, h3, h4 {
   to   { transform: translate3d(-80px,-80px,0); }
 }
 
+/* === DEBUG MODE: STARFIELD VISIBILITY CHECK === */
+.hero--with-bg {
+  outline: 4px solid magenta !important;      /* visual container boundary */
+}
+
+.hero--with-bg .stars {
+  background: rgba(255, 0, 0, 0.2) !important; /* bright translucent red */
+  outline: 4px dashed cyan !important;         /* show star container */
+  z-index: 0 !important;
+}
+
+.hero--with-bg .stars::before {
+  background: rgba(0, 255, 0, 0.3) !important; /* bright green layer */
+  outline: 3px dotted yellow !important;
+}
+
+.hero--with-bg .stars::after {
+  background: rgba(0, 0, 255, 0.3) !important; /* bright blue layer */
+  outline: 3px dotted orange !important;
+}
+
 /* Guaranteed readable hero text */
 .hero-title, .hero-sub {
   color: #fff;
   text-shadow: 0 2px 4px rgba(0,0,0,0.55);
 }
+
 
