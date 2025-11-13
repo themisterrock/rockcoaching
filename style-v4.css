@@ -45,8 +45,6 @@
   opacity: 0.55;
 }
 
-}
-
 /* Second layer */
 .hero--with-bg .stars::after {
   animation-delay: 15s;
