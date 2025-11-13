@@ -94,9 +94,22 @@
 
   <!-- Shared script -->
   <script src="script.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const reveal = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("revealed");
+    });
+  });
+
+  document.querySelectorAll(".reveal").forEach(el => reveal.observe(el));
+});
+</script>
+
 </body>
 
 </html>
+
 
 
 
