@@ -124,6 +124,12 @@ h1, h2, h3, h4 {
 
 .theme-toggle { margin-left: 12px; border: 1px solid var(--brand); background: transparent; color: var(--brand); border-radius: 50%; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
 
+/* ---------- Animation ---------- */
+@keyframes starShift {
+  from { background-position: 0 0; }
+  to   { background-position: -200px -200px; }
+}
+
 /* ---------- Hero ---------- */
 .hero--with-bg {
   position: relative;
@@ -187,4 +193,5 @@ h1, h2, h3, h4 {
 .hero-inner { position: relative; z-index: 2; }
 .hero-title { font-size: clamp(2.2rem, 3.5vw, 3.2rem); margin-bottom: .3em; }
 .hero-sub { font-size: 1.15rem
+
 
