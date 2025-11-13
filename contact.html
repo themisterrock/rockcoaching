@@ -1,104 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact – Rock Coaching</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Rock Coaching</title>
+  <link rel="stylesheet" href="style-final.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="logo.png" class="brand-mark" alt="Rock Coaching logo" />
-        <span class="brand-name">Rock Coaching</span>
-      </a>
-      <button class="mobile-toggle" aria-label="Toggle menu"><span></span></button>
-      <nav class="site-nav">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
-      </nav>
-    </div>
-  </header>
 
- <section class="hero hero--with-bg">
-    <div class="container hero-inner reveal">
-      <h1>Get in Touch</h1>
-      <p class="lead">Whether you’re exploring coaching or have a question, your message is welcome. This form sends directly to <strong>rockcoaching@gmail.com</strong>.</p>
-    </div>
-  </section>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="logo.png" alt="">
+      <span class="brand-name">Rock Coaching</span>
+    </a>
 
-  <section class="section">
-    <div class="container" style="max-width:700px;">
-      <form action="https://formspree.io/f/mvgdondw" method="POST" class="card reveal">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;" />
+    <button class="mobile-toggle" onclick="document.querySelector('.site-header').classList.toggle('nav-open')">
+      <span></span>
+    </button>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;" />
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;"></textarea>
+<section class="section reveal">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p class="lead">Whether you’re ready to begin or just curious, reach out.</p>
 
-        <button type="submit" class="btn btn--primary">Send Message</button>
-      </form>
+    <form action="https://formspree.io/f/xbldwzpq" method="POST">
+      <label>Name</label>
+      <input type="text" name="name" required>
 
-      <p class="note">Thank you for contacting Rock Coaching.</p>
-    </div>
-  </section>
+      <label>Email</label>
+      <input type="email" name="email" required>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="foot-brand">
-        <img src="logo.png" alt="Rock Coaching logo" />
-        <p>© Rock Coaching 2023</p>
-      </div>
-      <nav class="foot-nav">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="foot-social">
-        <a href="#">Instagram</a>
-        <a href="mailto:rockcoaching@gmail.com">Email</a>
-      </div>
-    </div>
-  </footer>
+      <label>Your Message</label>
+      <textarea name="message" required></textarea>
 
-  <script>
-  // Mobile nav toggle
-  const header = document.querySelector('.site-header');
-  document.querySelector('.mobile-toggle').addEventListener('click', ()=>{
-    header.classList.toggle('nav-open');
-  });
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
-  // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal--visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-  </script>
+<footer class="site-footer">
+  <div class="container">
+    <a class="footer-brand" href="index.html">Rock Coaching</a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© 2025 Rock Coaching.</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const r = new IntersectionObserver(E => E.forEach(e => e.isIntersecting && e.target.classList.add("revealed")));
+  document.querySelectorAll(".reveal").forEach(el => r.observe(el));
+});
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
