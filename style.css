@@ -125,11 +125,21 @@ h1, h2, h3, h4 {
 .theme-toggle { margin-left: 12px; border: 1px solid var(--brand); background: transparent; color: var(--brand); border-radius: 50%; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
 
 /* ---------- Hero ---------- */
-.hero--with-bg { position: relative; padding: 140px 0; text-align: center; color: #fff; background: radial-gradient(1200px 500px at 50% -10%, rgba(201,168,111,0.25), transparent 60%), radial-gradient(900px 400px at 80% 10%, rgba(201,168,111,0.18), transparent 60%), linear-gradient(180deg, #2a3142 0%, #1a2133 60%, #151b2b 100%); overflow: hidden; }
-.hero--with-bg::after { content:""; position:absolute; inset:0; background: rgba(0,0,0,.45); z-index:1; }
-.hero-inner { position: relative; z-index: 2; }
-.hero-title { font-size: clamp(2.2rem, 3.5vw, 3.2rem); margin-bottom: .3em; }
-.hero-sub { font-size: 1.15rem; }
+.hero--with-bg {
+  position: relative;
+  padding: 140px 0;
+  text-align: center;
+  color: #fff;
+  background:
+    url("starfield.png") repeat,
+    radial-gradient(1200px 500px at 50% -10%, rgba(201,168,111,0.25), transparent 60%),
+    radial-gradient(900px 400px at 80% 10%, rgba(201,168,111,0.18), transparent 60%),
+    linear-gradient(180deg, #2a3142 0%, #1a2133 60%, #151b2b 100%);
+  background-size: 600px 600px, auto, auto, auto;
+  animation: starShift 60s linear infinite;
+  overflow: hidden;
+}
+
 
 /* ---------- Hero Starfield Layer ---------- */
 .hero--with-bg .stars {
@@ -177,3 +187,4 @@ h1, h2, h3, h4 {
 .hero-inner { position: relative; z-index: 2; }
 .hero-title { font-size: clamp(2.2rem, 3.5vw, 3.2rem); margin-bottom: .3em; }
 .hero-sub { font-size: 1.15rem
+
