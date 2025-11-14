@@ -3,94 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact – Rock Coaching</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Contact | Rock Coaching</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="logo.png" class="brand-mark" alt="Rock Coaching logo" />
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Rock Coaching logo" class="brand-mark">
         <span class="brand-name">Rock Coaching</span>
       </a>
-      <button class="mobile-toggle" aria-label="Toggle menu"><span></span></button>
       <nav class="site-nav">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="testimonials.html">Testimonials</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <button class="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+      </button>
     </div>
   </header>
 
-  
-<!-- Celestial hero -->
   <section class="hero hero--with-bg">
-    <div class="container hero-inner reveal">
-      <h1>Get in Touch</h1>
-      <p class="hero-sub">Whether you’re exploring coaching or have a question, your message is welcome. This form sends directly to <strong>rachelrockcoach@outlook.com</strong>.</p>
+    <div class="container hero-inner">
+      <h1 class="hero-title">Contact</h1>
+      <p class="hero-sub">
+        No pressure. No commitment. Just a first conversation to see if this feels like a good fit.
+      </p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container" style="max-width:700px;">
-      <form action="https://formspree.io/f/yourformid" method="POST" class="card reveal">
+  <section class="section section--tint reveal">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p class="lead">
+        Share a little about what brings you here, and I’ll get back to you as soon as I can with some options.
+      </p>
+
+      <!-- Replace the action URL with your Formspree or other provider -->
+      <form action="https://formspree.io/f/your-form-id" method="POST">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;" />
+        <input id="name" name="name" type="text" required>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;" />
+        <input id="email" name="_replyto" type="email" required>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;"></textarea>
+        <textarea id="message" name="message" required></textarea>
 
-        <button type="submit" class="btn btn--primary">Send Message</button>
+        <button type="submit">Send Message</button>
       </form>
-
-      <p class="note">To activate the form, sign up at <a href="https://formspree.io" target="_blank">Formspree.io</a> using <strong>rockcoaching@gmail.com</strong>, create a new project, and replace <code>yourformid</code> in the form action above with the unique Form ID they provide.</p>
     </div>
   </section>
 
- <footer class="site-footer">
-  <div class="container">
-    <a class="footer-brand" href="index.html">Rock Coaching</a>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <p class="footer-copy">© 2023 Rock Coaching.</p>
-  </div>
-</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="footer-brand">Rock Coaching</a>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-copy">
+        &copy; <span id="year"></span> Rock Coaching. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
   <script>
-  // Mobile nav toggle
-  const header = document.querySelector('.site-header');
-  document.querySelector('.mobile-toggle').addEventListener('click', ()=>{
-    header.classList.toggle('nav-open');
-  });
-
-  // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal--visible');
-        observer.unobserve(entry.target);
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.mobile-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          header.classList.toggle('nav-open');
+        });
       }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('revealed');
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
     });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
-
-
-
-
-
