@@ -366,6 +366,30 @@ h1, h2, h3, h4 {
 .insta-link:hover .icon-instagram {
   fill: var(--brand-700);
 }
+.contact-social {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.contact-social p {
+  margin-bottom: 6px;
+  opacity: 0.75;
+}
+
+.insta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--brand);
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.insta-link:hover {
+  color: var(--brand-700);
+}
+
 
 
 
