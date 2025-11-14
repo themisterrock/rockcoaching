@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sample Post | Rock Coaching</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Rock Coaching logo" class="brand-mark">
+        <span class="brand-name">Rock Coaching</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="section reveal">
+    <div class="container blog-post">
+      <h1>Tiny Habits, Real Change</h1>
+
+      <p>
+       When we think about changing our lives, most of us imagine big leaps — new routines, new careers, complete transformations. But real change usually starts smaller than that.</p>
+
+<p>The smallest habits are often the most powerful because they’re sustainable. One glass of water before coffee. A five-minute walk between meetings. Writing a single sentence in a journal rather than a full page. These moments seem tiny, but they begin to shift your relationship with discipline, self-trust, and energy.</p>
+
+<p>In coaching, I often see people wait for the “right moment” to start something new. The truth is, the right moment appears once you’ve already started.</p>
+
+<p>Choose one small thing today — something kind to yourself, something achievable. Do it again tomorrow. And again the day after. Momentum doesn’t come from motivation; it comes from repetition.</p>
+
+<p>Small steps don’t look impressive, but they quietly build a stronger foundation — the kind that lasts.
+      </p>
+    </div>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="footer-brand">Rock Coaching</a>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+         <a href="https://instagram.com/rockcoaching" target="_blank" rel="noopener" class="insta-link">
+  <svg class="icon-instagram" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+  </svg>
+  Instagram
+</a>
+      </nav>
+      <div class="footer-copy">
+        &copy; <span id="year"></span> Rock Coaching. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.mobile-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          header.classList.toggle('nav-open');
+        });
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('revealed');
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
