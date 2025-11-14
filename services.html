@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Services — Rock Coaching</title>
+  <title>Rock Coaching</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -16,9 +16,11 @@
       <img class="brand-mark" src="logo.png" alt="">
       <span class="brand-name">Rock Coaching</span>
     </a>
+
     <button class="mobile-toggle" onclick="document.querySelector('.site-header').classList.toggle('nav-open')">
       <span></span>
     </button>
+
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -29,30 +31,34 @@
     </nav>
   </div>
 </header>
-
+  
 <!-- Celestial hero -->
   <section class="hero hero--with-bg">
     <div class="container hero-inner reveal">
       <h1>Coaching Services</h1>
-      <p class="hero-sub">Support built around growth that lasts — at a pace that respects your life.</p>
+      <p class="hero-sub">A calm, grounded space where clarity grows and confidence follows.</p>
     </div>
   </section>
   
 <section class="section reveal">
-   <div class="card-grid">
+  <div class="container hero-inner">
+    <h2>My Approach</h2>
+    <p class="lead">I focus on practicality, honesty, and human warmth. Coaching is a conversation — not a lecture.</p>
+
+    <div class="card-grid">
       <div class="card">
-        <h3>Personal Coaching</h3>
-        <p>One-to-one sessions focused on building clarity, confidence, and direction.</p>
+        <h3>1 to 1 Wellbeing Coaching</h3>
+        <p>Sessions built around clarity, grounding, and habits that hold up in everyday life. Explore what’s working, what’s not, and what can shift now — without pressure.</p>
       </div>
 
       <div class="card">
-        <h3>Wellbeing Coaching</h3>
-        <p>Develop calm, resilience, and emotional steadiness — even in challenging times.</p>
+        <h3>Life Direction Sessions</h3>
+        <p>For moments when everything feels up in the air. Pause, reassess priorities, and map out a direction that feels honest and workable.</p>
       </div>
 
       <div class="card">
-        <h3>Transitions Coaching</h3>
-        <p>Navigate life changes with intention, honesty, and real support.</p>
+        <h3>Mindset & Confidence Support</h3>
+        <p>Shift the inner dialogue, rebuild confidence, and get out of the loop of second‑guessing. Practical, compassionate, and structured.</p>
       </div>
     </div>
   </div>
@@ -74,13 +80,29 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const r = new IntersectionObserver(E => E.forEach(e => e.isIntersecting && e.target.classList.add("revealed")));
-  document.querySelectorAll(".reveal").forEach(el => r.observe(el));
+  const reveal = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("revealed"));
+  });
+  document.querySelectorAll(".reveal").forEach(el => reveal.observe(el));
 });
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
