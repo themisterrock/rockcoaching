@@ -3,74 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog – Rock Coaching</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Blog | Rock Coaching</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="logo.png" class="brand-mark" alt="Rock Coaching logo" />
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Rock Coaching logo" class="brand-mark">
         <span class="brand-name">Rock Coaching</span>
       </a>
-      <button class="mobile-toggle" aria-label="Toggle menu"><span></span></button>
       <nav class="site-nav">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="testimonials.html">Testimonials</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <button class="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <!-- Celestial hero -->
   <section class="hero hero--with-bg">
-    <div class="container hero-inner reveal">
-      <h1>Blog</h1>
-      <p class="hero-sub">Short reflections, practical tools, and gentle reminders — simple insights you can revisit anytime.</p>
+    <div class="container hero-inner">
+      <h1 class="hero-title">Blog</h1>
+      <p class="hero-sub">
+        Gentle, practical reflections on stress, change, and living a life that feels like yours.
+      </p>
     </div>
   </section>
 
-  <!-- Blog content -->
-  <section class="section">
-    <div class="container" style="max-width:850px;">
+  <section class="section reveal">
+    <div class="container blog-list">
+      <h2>Recent Posts</h2>
+      <p class="lead">
+        Below are sample posts. You can replace these with your own and link them to separate pages.
+      </p>
 
-      <!-- SAMPLE POST BLOCK (Duplicate to add new posts) -->
-      <article class="card reveal" style="margin-bottom:40px;">
-        <h2>Sample Blog Post Title</h2>
-        <p class="meta">Date here</p>
-        <p>This is placeholder text for a blog entry. Replace this with real content when you're ready. Each post is designed to be clean, readable, and shareable.</p>
+      <article class="blog-card">
+        <h3><a href="post-sample.html">When Everything Feels “Too Much”</a></h3>
+        <div class="meta">Sample post · You can replace this with your own writing.</div>
+        <p>Sometimes life doesn’t fall apart in one dramatic moment — it frays slowly. This post explores how to notice the signs earlier, and what to do when you realise you’ve been carrying too much for too long.</p>
       </article>
-      <!-- END SAMPLE BLOCK -->
 
-      <p class="note">To add a new post: duplicate the block above, paste it below, and update the title, date, and content. The page styles it automatically.</p>
+      <article class="blog-card">
+        <h3><a href="post-sample.html">Small Changes, Real Shifts</a></h3>
+        <div class="meta">Sample post · Placeholder content.</div>
+        <p>Change doesn’t have to be loud to be real. In coaching, we often focus on small, repeatable actions that quietly reshape your days.</p>
+      </article>
     </div>
   </section>
 
- <footer class="site-footer">
-  <div class="container">
-    <a class="footer-brand" href="index.html">Rock Coaching</a>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <p class="footer-copy">© 2023 Rock Coaching.</p>
-  </div>
-</footer>
-  
-  <!-- Shared script -->
-  <script src="script.js"></script>
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="footer-brand">Rock Coaching</a>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-copy">
+        &copy; <span id="year"></span> Rock Coaching. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.mobile-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          header.classList.toggle('nav-open');
+        });
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('revealed');
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
