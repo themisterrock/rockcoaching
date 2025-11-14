@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sample Post | Rock Coaching</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Rock Coaching logo" class="brand-mark">
+        <span class="brand-name">Rock Coaching</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="section reveal">
+    <div class="container blog-post">
+      <h1>When Everything Feels “Too Much”</h1>
+      <div class="meta">Sample blog post · Replace this with your own words.</div>
+
+      <p>
+        This is placeholder text you can overwrite with your own writing. Use this page as a simple template for future posts.
+      </p>
+      <p>
+        You might talk about how overwhelm builds slowly, how hard it is to ask for help, and how small, consistent support can make a real difference.
+      </p>
+      <p>
+        When you’re ready, just copy this file, rename it (for example, <code>post-overwhelm.html</code>), and update the title, description, and paragraphs.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="footer-brand">Rock Coaching</a>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-copy">
+        &copy; <span id="year"></span> Rock Coaching. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.mobile-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          header.classList.toggle('nav-open');
+        });
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('revealed');
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
