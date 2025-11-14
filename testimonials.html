@@ -1,124 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rock Coaching</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Testimonials | Rock Coaching</title>
+  <link rel="stylesheet" href="style-final.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Rock Coaching logo" class="brand-mark">
+        <span class="brand-name">Rock Coaching</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <img class="brand-mark" src="logo.png" alt="">
-      <span class="brand-name">Rock Coaching</span>
-    </a>
-
-    <button class="mobile-toggle" onclick="document.querySelector('.site-header').classList.toggle('nav-open')">
-      <span></span>
-    </button>
-
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-  
-<!-- Celestial hero -->
   <section class="hero hero--with-bg">
-    <div class="container hero-inner reveal">
-      <h1>What Clients Say</h1>
-      <p class="hero-sub">Reflections from clients who’ve found steadiness, direction, and clarity through Rock Coaching.</p>
-    </div>
-  </section>
-  
- <!-- Testimonials grid -->
-  <section class="section">
-    <div class="container grid-2" style="gap:40px;">
-
-      <article class="card reveal" style="border-left:4px solid var(--brand);">
-        <blockquote>
-          <p>“Steady, practical, and kind. Every session left me with something I could actually use the same day.”</p>
-          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client</footer>
-        </blockquote>
-      </article>
-
-      <article class="card reveal" style="border-left:4px solid var(--brand);">
-        <blockquote>
-          <p>“I feel less scattered and more like myself again. The sessions helped me untangle so much noise I didn’t realise I was carrying.”</p>
-          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client</footer>
-        </blockquote>
-      </article>
-
-      <article class="card reveal" style="border-left:4px solid var(--brand);">
-        <blockquote>
-          <p>“What I loved is that nothing felt forced. The guidance was calm, thoughtful, and actually made sense for my life.”</p>
-          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client</footer>
-        </blockquote>
-      </article>
-
-      <article class="card reveal" style="border-left:4px solid var(--brand);">
-        <blockquote>
-          <p>“I surprised myself with how much clarity I found. I came in feeling stuck and left feeling like I finally had traction again.”</p>
-          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client</footer>
-        </blockquote>
-      </article>
-
+    <div class="container hero-inner">
+      <h1 class="hero-title">Testimonials</h1>
+      <p class="hero-sub">
+        Anonymous, but honest. These words are shared with permission — details are changed to protect privacy.
+      </p>
     </div>
   </section>
 
+  <section class="section section--tint reveal">
+    <div class="container">
+      <h2>Client Experiences</h2>
+      <p class="lead">
+        Coaching is personal, and so are these stories. They are here to give you a sense of how this work can feel.
+      </p>
+      <div class="card-grid">
+        <article class="testimonial-card">
+          <p>“I came to you feeling completely overwhelmed. You didn’t rush me, you didn’t minimise anything. You helped me put words to what I was carrying, and then helped me find a way to carry it differently.”</p>
+          <div class="testimonial-author">— “M”, public sector worker</div>
+        </article>
+        <article class="testimonial-card">
+          <p>“For the first time I felt like I didn’t have to justify myself. You listened, you reflected things back, and you gently challenged me when I needed it.”</p>
+          <div class="testimonial-author">— “R”, parent</div>
+        </article>
+        <article class="testimonial-card">
+          <p>“You never made me feel dramatic or silly. You helped me see how much I was holding together, and that I deserved support too.”</p>
+          <div class="testimonial-author">— “T”, key worker</div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<footer class="site-footer">
-  <div class="container">
-    <a class="footer-brand" href="index.html">Rock Coaching</a>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <p class="footer-copy">© 2023 Rock Coaching.</p>
-  </div>
-</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="footer-brand">Rock Coaching</a>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-copy">
+        &copy; <span id="year"></span> Rock Coaching. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const reveal = new IntersectionObserver(entries => {
-    entries.forEach(e => e.isIntersecting && e.target.classList.add("revealed"));
-  });
-  document.querySelectorAll(".reveal").forEach(el => reveal.observe(el));
-});
-</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.mobile-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          header.classList.toggle('nav-open');
+        });
+      }
 
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('revealed');
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
