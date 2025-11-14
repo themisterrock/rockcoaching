@@ -45,20 +45,24 @@
       </p>
 
       <!-- Replace the action URL with your Formspree or other provider -->
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+    <div class="container" style="max-width:700px;">
+      <form action="https://formspree.io/f/yourformid" method="POST" class="card reveal">
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" required>
+        <input type="text" id="name" name="name" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;" />
 
         <label for="email">Email</label>
-        <input id="email" name="_replyto" type="email" required>
+        <input type="email" id="email" name="email" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;" />
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message" rows="6" required style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;"></textarea>
 
-        <button type="submit">Send Message</button>
+        <button type="submit" class="btn btn--primary">Send Message</button>
       </form>
+
+      <p class="note">To activate the form, sign up at <a href="https://formspree.io" target="_blank">Formspree.io</a> using <strong>rockcoaching@gmail.com</strong>, create a new project, and replace <code>yourformid</code> in the form action above with the unique Form ID they provide.</p>
     </div>
   </section>
+
 
   <footer class="site-footer">
     <div class="container">
@@ -100,3 +104,4 @@
   </script>
 </body>
 </html>
+
