@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Testimonials — Rock Coaching</title>
+  <title>Rock Coaching</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -31,36 +31,50 @@
     </nav>
   </div>
 </header>
-
+  
 <!-- Celestial hero -->
   <section class="hero hero--with-bg">
     <div class="container hero-inner reveal">
       <h1>What Clients Say</h1>
-      <p class="hero-sub">Real words from real people who built real change.</p>
+      <p class="hero-sub">Reflections from clients who’ve found steadiness, direction, and clarity through Rock Coaching.</p>
     </div>
   </section>
   
-<section class="section reveal">
-   <div class="grid-gap-large">
+ <!-- Testimonials grid -->
+  <section class="section">
+    <div class="container grid-2" style="gap:40px;">
 
-      <div class="card">
-        <p>"Working with Rock Coaching gave me clarity I didn’t realise I was missing."</p>
-        <div class="testimonial-author">— Jessica. Carolina, USA.</div>
-      </div>
+      <article class="card reveal" style="border-left:4px solid var(--brand);">
+        <blockquote>
+          <p>“Steady, practical, and kind. Every session left me with something I could actually use the same day.”</p>
+          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client</footer>
+        </blockquote>
+      </article>
 
-      <div class="card">
-        <p>"I found confidence again. Not by being pushed — but by being understood."</p>
-        <div class="testimonial-author">— Andy. York, UK.</div>
-      </div>
+      <article class="card reveal" style="border-left:4px solid var(--brand);">
+        <blockquote>
+          <p>“I feel less scattered and more like myself again. The sessions helped me untangle so much noise I didn’t realise I was carrying.”</p>
+          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client</footer>
+        </blockquote>
+      </article>
 
-      <div class="card">
-        <p>"These sessions became a calm anchor during a messy period of my life."</p>
-        <div class="testimonial-author">— Michelle. Belfast, UK.</div>
-      </div>
+      <article class="card reveal" style="border-left:4px solid var(--brand);">
+        <blockquote>
+          <p>“What I loved is that nothing felt forced. The guidance was calm, thoughtful, and actually made sense for my life.”</p>
+          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client</footer>
+        </blockquote>
+      </article>
+
+      <article class="card reveal" style="border-left:4px solid var(--brand);">
+        <blockquote>
+          <p>“I surprised myself with how much clarity I found. I came in feeling stuck and left feeling like I finally had traction again.”</p>
+          <footer style="margin-top:10px; font-weight:600;">— Placeholder Client</footer>
+        </blockquote>
+      </article>
 
     </div>
-  </div>
-</section>
+  </section>
+
 
 <footer class="site-footer">
   <div class="container">
@@ -78,13 +92,29 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const r = new IntersectionObserver(E => E.forEach(e => e.isIntersecting && e.target.classList.add("revealed")));
-  document.querySelectorAll(".reveal").forEach(el => r.observe(el));
+  const reveal = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("revealed"));
+  });
+  document.querySelectorAll(".reveal").forEach(el => reveal.observe(el));
 });
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
