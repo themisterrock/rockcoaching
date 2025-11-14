@@ -1,113 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rock Coaching</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | Rock Coaching</title>
+  <link rel="stylesheet" href="style-final.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Rock Coaching logo" class="brand-mark">
+        <span class="brand-name">Rock Coaching</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <img class="brand-mark" src="logo.png" alt="">
-      <span class="brand-name">Rock Coaching</span>
-    </a>
-
-    <button class="mobile-toggle" onclick="document.querySelector('.site-header').classList.toggle('nav-open')">
-      <span></span>
-    </button>
-
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-  
-<!-- Celestial hero -->
   <section class="hero hero--with-bg">
-    <div class="container hero-inner reveal">
-      <h1>Coaching Services</h1>
-      <p class="hero-sub">Steady, practical support tailored to real life. No jargon. No overwhelm. Just grounded guidance.</p>
+    <div class="container hero-inner">
+      <h1 class="hero-title">Coaching Services</h1>
+      <p class="hero-sub">
+        Simple, structured support that fits into real life — not an ideal one.
+      </p>
     </div>
   </section>
-  
-<section class="section reveal">
-  <div class="container hero-inner">
-    <h2>My Approach</h2>
-    <p class="lead">I focus on practicality, honesty, and human warmth. Coaching is a conversation — not a lecture.</p>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>1 to 1 Wellbeing Coaching</h3>
-        <p>Sessions built around clarity, grounding, and habits that hold up in everyday life. Explore what’s working, what’s not, and what can shift now — without pressure.</p>
-      </div>
-
-      <div class="card">
-        <h3>Life Direction Sessions</h3>
-        <p>For moments when everything feels up in the air. Pause, reassess priorities, and map out a direction that feels honest and workable.</p>
-      </div>
-
-      <div class="card">
-        <h3>Mindset & Confidence Support</h3>
-        <p>Shift the inner dialogue, rebuild confidence, and get out of the loop of second‑guessing. Practical, compassionate, and structured.</p>
+  <section class="section reveal">
+    <div class="container">
+      <h2>How We Can Work Together</h2>
+      <p class="lead">
+        You don’t need a “perfect plan” before we start. We’ll build the right shape of support as we go.
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h3>One-to-One Coaching</h3>
+          <p>
+            Regular sessions focused on what matters most right now — whether that’s stress, decision-making,
+            confidence, or rebuilding after a difficult season.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Short-Focus Packages</h3>
+          <p>
+            A small block of sessions (for example, 3–6) around a clear theme: returning to work, managing change,
+            setting boundaries, or navigating a specific transition.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Ongoing Support</h3>
+          <p>
+            Space to think out loud regularly. A steady, familiar place to land as life shifts, without having to start
+            from scratch every time.
+          </p>
+        </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="site-footer">
-  <div class="container">
-    <a class="footer-brand" href="index.html">Rock Coaching</a>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <p class="footer-copy">© 2023 Rock Coaching.</p>
-  </div>
-</footer>
+  <section class="section section--tint reveal">
+    <div class="container grid-gap-large">
+      <div>
+        <h2>What Happens In A Session?</h2>
+        <p class="lead">
+          No scripts, just a calm and contained space to slow down and work things through.
+        </p>
+        <p>
+          We’ll usually start with where you are today, then explore what’s been heavy, what’s working, and where you’d
+          like things to be different. Together, we’ll identify small, realistic actions that feel possible — not
+          punishing.
+        </p>
+      </div>
+      <div class="feature-block">
+        <h3>Session basics</h3>
+        <p>• Sessions are usually 50–60 minutes<br>
+           • Online (video) or phone sessions available<br>
+           • Frequency can be weekly, fortnightly, or flexible<br>
+           • You’re always in control of the pace</p>
+      </div>
+    </div>
+  </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const reveal = new IntersectionObserver(entries => {
-    entries.forEach(e => e.isIntersecting && e.target.classList.add("revealed"));
-  });
-  document.querySelectorAll(".reveal").forEach(el => reveal.observe(el));
-});
-</script>
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="footer-brand">Rock Coaching</a>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-copy">
+        &copy; <span id="year"></span> Rock Coaching. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.mobile-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          header.classList.toggle('nav-open');
+        });
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('revealed');
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
